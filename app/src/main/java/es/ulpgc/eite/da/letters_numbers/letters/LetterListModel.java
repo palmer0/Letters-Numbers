@@ -10,8 +10,7 @@ import es.ulpgc.eite.da.letters_numbers.data.LetterData;
 
 public class LetterListModel implements LetterListContract.Model {
 
-  //public static String TAG = LetterListModel.class.getSimpleName();
-  public static String TAG = "LettersAndNumbers.LetterListModel";
+  public static String TAG = "Letters-Numbers.LetterListModel";
 
   private String[] letters = {
       "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
@@ -32,7 +31,7 @@ public class LetterListModel implements LetterListContract.Model {
       List<LetterData> datasource, Integer index, Integer number
   ) {
 
-    // Log.e(TAG, "updateDataOnRestartScreen()");
+    // Log.e(TAG, "updateDataOnRestartScreen");
 
     this.datasource = datasource;
     this.index=index;
@@ -64,7 +63,7 @@ public class LetterListModel implements LetterListContract.Model {
 
   @Override
   public void updateDataFromNextScreen(LetterData data, Integer number) {
-    // Log.e(TAG, "updateDataFromNextScreen()");
+    // Log.e(TAG, "updateDataFromNextScreen");
 
     Log.e(TAG, "datasource: "+datasource);
 

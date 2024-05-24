@@ -18,8 +18,7 @@ public class LetterListActivity
     extends AppCompatActivity implements LetterListContract.View {
 
 
-  //public static String TAG = LetterListActivity.class.getSimpleName();
-  public static String TAG = "LettersAndNumbers.LetterListActivity";
+  public static String TAG = "Letters-Numbers.LetterListActivity";
 
   private LetterListContract.Presenter presenter;
 
@@ -56,6 +55,7 @@ public class LetterListActivity
     presenter.onResume();
   }
 
+  @SuppressWarnings("deprecation")
   @Override
   public void onBackPressed() {
     super.onBackPressed();
@@ -84,7 +84,7 @@ public class LetterListActivity
 
   @Override
   public void refreshWithDataUpdated(LetterListViewModel viewModel) {
-    //Log.e(TAG, "refreshWithDataUpdated()");
+    //Log.e(TAG, "refreshWithDataUpdated");
 
     List<LetterData> datasource = viewModel.datasource;
 

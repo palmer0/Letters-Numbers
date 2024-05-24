@@ -13,15 +13,12 @@ public class LetterListScreen {
 //        new WeakReference<>((FragmentActivity) view);
 
     AppMediator mediator = AppMediator.getInstance();
-
-    //LetterListContract.Router router = new LetterListRouter(mediator);
-    //LetterListContract.Presenter presenter = new LetterListPresenter(state);
     LetterListContract.Presenter presenter = new LetterListPresenter(mediator);
-    LetterListContract.Model model = new LetterListModel();
-    presenter.injectModel(model);
-    //presenter.injectRouter(router);
-    presenter.injectView(new WeakReference<>(view));
 
+    LetterListContract.Model model = new LetterListModel();
+
+    presenter.injectModel(model);
+    presenter.injectView(new WeakReference<>(view));
     view.injectPresenter(presenter);
 
   }

@@ -15,8 +15,7 @@ import es.ulpgc.eite.da.letters_numbers.data.NumberData;
 public class NumberListActivity
     extends AppCompatActivity implements NumberListContract.View {
 
-  //public static String TAG = NumberListActivity.class.getSimpleName();
-  public static String TAG = "LettersAndNumbers.NumberListActivity";
+  public static String TAG = "Letters-Numbers.NumberListActivity";
 
   private NumberListContract.Presenter presenter;
 
@@ -45,6 +44,7 @@ public class NumberListActivity
     presenter.onResume();
   }
 
+  @SuppressWarnings("deprecation")
   @Override
   public void onBackPressed() {
     super.onBackPressed();
@@ -72,7 +72,7 @@ public class NumberListActivity
 
   @Override
   public void refreshWithDataUpdated(NumberListViewModel viewModel) {
-    //Log.e(TAG, "refreshWithDataUpdated()");
+    //Log.e(TAG, "refreshWithDataUpdated");
 
     List<NumberData> datasource = viewModel.data.numbers;
 

@@ -12,13 +12,11 @@ import es.ulpgc.eite.da.letters_numbers.data.NumberData;
 
 public class NumberListPresenter implements NumberListContract.Presenter {
 
-  //public static String TAG = NumberListPresenter.class.getSimpleName();
-  public static String TAG = "LettersAndNumbers.NumberListPresenter";
+  public static String TAG = "Letters-Numbers.NumberListPresenter";
 
   private WeakReference<NumberListContract.View> view;
   private NumberListState state;
   private NumberListContract.Model model;
-  //private NumberListContract.Router router;
   private AppMediator mediator;
 
   public NumberListPresenter(AppMediator mediator) {
@@ -26,9 +24,6 @@ public class NumberListPresenter implements NumberListContract.Presenter {
     //state = mediator.getNumberListState();
   }
 
-//  public NumberListPresenter(NumberListState state) {
-//    this.state = state;
-//  }
 
   @Override
   public void onStart() {
@@ -46,7 +41,6 @@ public class NumberListPresenter implements NumberListContract.Presenter {
 
     // use passed state if is necessary
     LettersToNumbersState savedState = getStateFromPreviousScreen();
-    //LettersToNumbersState savedState = router.getStateFromPreviousScreen();
     if (savedState != null) {
 
       // update the model if is necessary
@@ -90,9 +84,6 @@ public class NumberListPresenter implements NumberListContract.Presenter {
         new NumbersToLettersState(state.data, state.number)
     );
 
-//    router.passStateToPreviousScreen(
-//        new NumbersToLettersState(state.data, state.number)
-//    );
   }
 
   @Override
@@ -141,10 +132,5 @@ public class NumberListPresenter implements NumberListContract.Presenter {
     this.model = model;
   }
 
-  /*
-  @Override
-  public void injectRouter(NumberListContract.Router router) {
-    this.router = router;
-  }
-  */
+
 }

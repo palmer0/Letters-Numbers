@@ -13,16 +13,12 @@ public class NumberListScreen {
 //        new WeakReference<>((FragmentActivity) view);
 
     AppMediator mediator = AppMediator.getInstance();
-    //NumberListState state = mediator.getNumberListState();
-
-    //NumberListContract.Router router = new NumberListRouter(mediator);
-    //NumberListContract.Presenter presenter = new NumberListPresenter(state);
     NumberListContract.Presenter presenter = new NumberListPresenter(mediator);
-    NumberListContract.Model model = new NumberListModel();
-    presenter.injectModel(model);
-    //presenter.injectRouter(router);
-    presenter.injectView(new WeakReference<>(view));
 
+    NumberListContract.Model model = new NumberListModel();
+
+    presenter.injectModel(model);
+    presenter.injectView(new WeakReference<>(view));
     view.injectPresenter(presenter);
 
   }

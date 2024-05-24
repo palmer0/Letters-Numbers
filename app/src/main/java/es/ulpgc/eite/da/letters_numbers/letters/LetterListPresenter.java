@@ -12,8 +12,7 @@ import es.ulpgc.eite.da.letters_numbers.data.LetterData;
 
 public class LetterListPresenter implements LetterListContract.Presenter {
 
-  //public static String TAG = LetterListPresenter.class.getSimpleName();
-  public static String TAG = "LettersAndNumbers.LetterListPresenter";
+  public static String TAG = "Letters-Numbers.LetterListPresenter";
 
   private WeakReference<LetterListContract.View> view;
   private LetterListState state;

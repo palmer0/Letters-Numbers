@@ -6,15 +6,14 @@ import es.ulpgc.eite.da.letters_numbers.data.NumberData;
 
 public class NumberListModel implements NumberListContract.Model {
 
-  //public static String TAG = NumberListModel.class.getSimpleName();
-  public static String TAG = "LettersAndNumbers.NumberListModel";
+  public static String TAG = "Letters-Numbers.NumberListModel";
 
   private LetterData data;
   private Integer number;
 
   @Override
   public LetterData getStoredData() {
-    // Log.e(TAG, "getStoredData()");
+    // Log.e(TAG, "getStoredData");
     return data;
   }
 
@@ -27,7 +26,7 @@ public class NumberListModel implements NumberListContract.Model {
 
   @Override
   public void updateDataOnRestartScreen(LetterData data, Integer number) {
-    // Log.e(TAG, "updateDataOnRestartScreen()");
+    // Log.e(TAG, "updateDataOnRestartScreen");
     this.data=data;
     this.number =number;
   }
@@ -35,7 +34,7 @@ public class NumberListModel implements NumberListContract.Model {
 
   @Override
   public void updateDataFromPreviousScreen(LetterData data, Integer number) {
-    // Log.e(TAG, "updateDataFromPreviousScreen()");
+    // Log.e(TAG, "updateDataFromPreviousScreen");
     this.data=data;
     this.number =number;
   }
