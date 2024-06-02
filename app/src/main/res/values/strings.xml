@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Letters-Numbers</string>
-    <string name="numbers_title">Numbers</string>
-    <string name="letters_title">Letters</string>
+    <string name="numbers_title">Numbers Screen</string>
+    <string name="letters_title">Letters Screen</string>
 </resources>
