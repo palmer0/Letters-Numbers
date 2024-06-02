@@ -48,7 +48,11 @@ public class LetterListPresenter implements LetterListContract.Presenter {
     state = mediator.getLetterListState();
 
     // update the model if is necessary
-    model.updateDataOnRestartScreen(state.datasource, state.index, state.number);
+    model.updateDataOnRestartScreen(
+        state.datasource,
+        state.index,
+        state.number
+    );
   }
 
   @Override
@@ -64,7 +68,10 @@ public class LetterListPresenter implements LetterListContract.Presenter {
       Log.e(TAG, "datasource: "+state.datasource);
 
       // update the model if is necessary
-      model.updateDataFromNextScreen(savedState.data, savedState.number);
+      model.updateDataFromNextScreen(
+          savedState.data,
+          savedState.number
+      );
     }
 
     // call the model and update the state
@@ -111,9 +118,9 @@ public class LetterListPresenter implements LetterListContract.Presenter {
   public void onClickLetterListCell(LetterData data) {
     Log.e(TAG, "onClickLetterListCell()");
 
-    passStateToNextScreen(
-        new LettersToNumbersState(data, state.number)
-    );
+    LettersToNumbersState nextState =
+        new LettersToNumbersState(data, state.number);
+    passStateToNextScreen(nextState);
 
     view.get().navigateToNextScreen();
   }

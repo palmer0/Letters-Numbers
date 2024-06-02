@@ -44,7 +44,10 @@ public class NumberListPresenter implements NumberListContract.Presenter {
     if (savedState != null) {
 
       // update the model if is necessary
-      model.updateDataFromPreviousScreen(savedState.data, savedState.number);
+      model.updateDataFromPreviousScreen(
+          savedState.data,
+          savedState.number
+      );
     }
   }
 
@@ -56,7 +59,10 @@ public class NumberListPresenter implements NumberListContract.Presenter {
     state = mediator.getNumberListState();
 
     // update the model if is necessary
-    model.updateDataOnRestartScreen(state.data, state.number);
+    model.updateDataOnRestartScreen(
+        state.data,
+        state.number
+    );
     //model.updateDataOnRestartScreen(state.data);
   }
 
@@ -80,9 +86,9 @@ public class NumberListPresenter implements NumberListContract.Presenter {
   public void onBackPressed() {
     Log.e(TAG, "onBackPressed()");
 
-    passStateToPreviousScreen(
-        new NumbersToLettersState(state.data, state.number)
-    );
+    NumbersToLettersState prevState =
+        new NumbersToLettersState(state.data, state.number);
+    passStateToPreviousScreen(prevState);
 
   }
 
