@@ -81,100 +81,100 @@ public class EspressoTests {
     public void test01CrearPrimeraLetra() { // 1
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // When pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // Then mostramos letra en lista en posicion "0" con valor "A"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("0", "A");
+        robot.mostramosLetraEnLista("0", "A");
         // And mostramos lista de letras con dimension "1"
-        robot.mostramosListaDeLetrasConDimensionP1("1");
+        robot.mostramosListaDeLetras("1");
     }
 
     @Test
     public void test02CrearSegundaLetra() { // 2
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // When pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // Then mostramos letra en lista en posicion "0" con valor "A"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("0", "A");
+        robot.mostramosLetraEnLista("0", "A");
         // And mostramos letra en lista en posicion "1" con valor "B"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("1", "B");
+        robot.mostramosLetraEnLista("1", "B");
         // And mostramos lista de letras con dimension "2"
-        robot.mostramosListaDeLetrasConDimensionP1("2");
+        robot.mostramosListaDeLetras("2");
     }
 
     @Test
     public void test03PulsarEnSegundaLetra() { // 3
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // When pulsamos celda de letra en posicion "1"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("1");
+        robot.pulsamosLetraEnLista("1");
         // Then mostramos lista de numeros con dimension "0"
-        robot.mostramosListaDeNumerosConDimensionP1("0");
+        robot.mostramosListaDeNumeros("0");
     }
 
     @Test
     public void test04CrearPrimerNumeroParaSegundaLetra() { // 4
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "1"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("1");
+        robot.pulsamosLetraEnLista("1");
         // When pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // Then mostramos numero en lista en posicion "0" con valor "1"
-        robot.mostramosNumeroEnListaEnPosicionP1ConValorP2("0", "1");
+        robot.mostramosNumeroEnLista("0", "1");
         // And mostramos lista de numeros con dimension "1"
-        robot.mostramosListaDeNumerosConDimensionP1("1");
+        robot.mostramosListaDeNumeros("1");
     }
 
     @Test
     public void test05CrearSegundoNumeroParaSegundaLetra() { // 5
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "1"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("1");
+        robot.pulsamosLetraEnLista("1");
         // When pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // Then mostramos numero en lista en posicion "0" con valor "1"
-        robot.mostramosNumeroEnListaEnPosicionP1ConValorP2("0", "1");
+        robot.mostramosNumeroEnLista("0", "1");
         // And mostramos numero en lista en posicion "1" con valor "2"
-        robot.mostramosNumeroEnListaEnPosicionP1ConValorP2("1", "2");
+        robot.mostramosNumeroEnLista("1", "2");
         // And mostramos lista de numeros con dimension "2"
-        robot.mostramosListaDeNumerosConDimensionP1("2");
+        robot.mostramosListaDeNumeros("2");
     }
 
     @Test
     public void test06RegresarDesdeSegundoNumeroParaSegundaLetra() { // 6
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "1"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("1");
+        robot.pulsamosLetraEnLista("1");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos boton de lista de numeros
@@ -182,24 +182,24 @@ public class EspressoTests {
         // When pulsamos back en lista de numeros
         robot.pulsamosBackEnListaDeNumeros();
         // Then mostramos letra en lista en posicion "0" con valor "A"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("0", "A");
+        robot.mostramosLetraEnLista("0", "A");
         // And mostramos letra en lista en posicion "1" con valor "B"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("1", "B");
+        robot.mostramosLetraEnLista("1", "B");
         // And mostramos lista de letras con dimension "2"
-        robot.mostramosListaDeLetrasConDimensionP1("2");
+        robot.mostramosListaDeLetras("2");
     }
 
     @Test
     public void test07CrearTercerLetra() { // 7
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "1"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("1");
+        robot.pulsamosLetraEnLista("1");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos boton de lista de numeros
@@ -209,26 +209,26 @@ public class EspressoTests {
         // When pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // Then mostramos letra en lista en posicion "0" con valor "A"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("0", "A");
+        robot.mostramosLetraEnLista("0", "A");
         // And mostramos letra en lista en posicion "1" con valor "B"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("1", "B");
+        robot.mostramosLetraEnLista("1", "B");
         // And mostramos letra en lista en posicion "2" con valor "C"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("2", "C");
+        robot.mostramosLetraEnLista("2", "C");
         // And mostramos lista de letras con dimension "3"
-        robot.mostramosListaDeLetrasConDimensionP1("3");
+        robot.mostramosListaDeLetras("3");
     }
 
     @Test
     public void test08PulsarEnTerceraLetra() { // 8
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "1"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("1");
+        robot.pulsamosLetraEnLista("1");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos boton de lista de numeros
@@ -238,22 +238,22 @@ public class EspressoTests {
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // When pulsamos celda de letra en posicion "2"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("2");
+        robot.pulsamosLetraEnLista("2");
         // Then mostramos lista de numeros con dimension "0"
-        robot.mostramosListaDeNumerosConDimensionP1("0");
+        robot.mostramosListaDeNumeros("0");
     }
 
     @Test
     public void test09CrearPrimerNumeroParaTerceraLetra() { // 9
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "1"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("1");
+        robot.pulsamosLetraEnLista("1");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos boton de lista de numeros
@@ -263,26 +263,26 @@ public class EspressoTests {
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "2"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("2");
+        robot.pulsamosLetraEnLista("2");
         // When pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // Then mostramos numero en lista en posicion "0" con valor "3"
-        robot.mostramosNumeroEnListaEnPosicionP1ConValorP2("0", "3");
+        robot.mostramosNumeroEnLista("0", "3");
         // And mostramos lista de numeros con dimension "1"
-        robot.mostramosListaDeNumerosConDimensionP1("1");
+        robot.mostramosListaDeNumeros("1");
     }
 
     @Test
     public void test10RegresarDesdePrimerNumeroParaTerceraLetra() { // 10
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "1"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("1");
+        robot.pulsamosLetraEnLista("1");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos boton de lista de numeros
@@ -292,32 +292,32 @@ public class EspressoTests {
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "2"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("2");
+        robot.pulsamosLetraEnLista("2");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // When pulsamos back en lista de numeros
         robot.pulsamosBackEnListaDeNumeros();
         // Then mostramos letra en lista en posicion "0" con valor "A"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("0", "A");
+        robot.mostramosLetraEnLista("0", "A");
         // And mostramos letra en lista en posicion "1" con valor "B"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("1", "B");
+        robot.mostramosLetraEnLista("1", "B");
         // And mostramos letra en lista en posicion "2" con valor "C"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("2", "C");
+        robot.mostramosLetraEnLista("2", "C");
         // And mostramos lista de letras con dimension "3"
-        robot.mostramosListaDeLetrasConDimensionP1("3");
+        robot.mostramosListaDeLetras("3");
     }
 
     @Test
     public void test11PulsarEnPrimeraLetra() { // 11
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "1"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("1");
+        robot.pulsamosLetraEnLista("1");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos boton de lista de numeros
@@ -327,28 +327,28 @@ public class EspressoTests {
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "2"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("2");
+        robot.pulsamosLetraEnLista("2");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos back en lista de numeros
         robot.pulsamosBackEnListaDeNumeros();
         // When pulsamos celda de letra en posicion "0"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("0");
+        robot.pulsamosLetraEnLista("0");
         // Then mostramos lista de numeros con dimension "0"
-        robot.mostramosListaDeNumerosConDimensionP1("0");
+        robot.mostramosListaDeNumeros("0");
     }
 
     @Test
     public void test12CrearPrimerNumeroParaPrimeraLetra() { // 12
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "1"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("1");
+        robot.pulsamosLetraEnLista("1");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos boton de lista de numeros
@@ -358,32 +358,32 @@ public class EspressoTests {
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "2"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("2");
+        robot.pulsamosLetraEnLista("2");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos back en lista de numeros
         robot.pulsamosBackEnListaDeNumeros();
         // And pulsamos celda de letra en posicion "0"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("0");
+        robot.pulsamosLetraEnLista("0");
         // When pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // Then mostramos numero en lista en posicion "0" con valor "4"
-        robot.mostramosNumeroEnListaEnPosicionP1ConValorP2("0", "4");
+        robot.mostramosNumeroEnLista("0", "4");
         // And mostramos lista de numeros con dimension "1"
-        robot.mostramosListaDeNumerosConDimensionP1("1");
+        robot.mostramosListaDeNumeros("1");
     }
 
     @Test
     public void test13RegresarDesdePrimerNumeroParaPrimeraLetra() { // 13
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "1"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("1");
+        robot.pulsamosLetraEnLista("1");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos boton de lista de numeros
@@ -393,25 +393,25 @@ public class EspressoTests {
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "2"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("2");
+        robot.pulsamosLetraEnLista("2");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos back en lista de numeros
         robot.pulsamosBackEnListaDeNumeros();
         // And pulsamos celda de letra en posicion "0"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("0");
+        robot.pulsamosLetraEnLista("0");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // When pulsamos back en lista de numeros
         robot.pulsamosBackEnListaDeNumeros();
         // Then mostramos letra en lista en posicion "0" con valor "A"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("0", "A");
+        robot.mostramosLetraEnLista("0", "A");
         // And mostramos letra en lista en posicion "1" con valor "B"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("1", "B");
+        robot.mostramosLetraEnLista("1", "B");
         // And mostramos letra en lista en posicion "2" con valor "C"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("2", "C");
+        robot.mostramosLetraEnLista("2", "C");
         // And mostramos lista de letras con dimension "3"
-        robot.mostramosListaDeLetrasConDimensionP1("3");
+        robot.mostramosListaDeLetras("3");
     }
 
 
@@ -426,22 +426,22 @@ public class EspressoTests {
     public void test14CrearPrimeraLetraConRotacion() { // 14
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // When rotamos pantalla
         rotateScreen();
         // Then mostramos letra en lista en posicion "0" con valor "A"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("0", "A");
+        robot.mostramosLetraEnLista("0", "A");
         // And mostramos lista de letras con dimension "1"
-        robot.mostramosListaDeLetrasConDimensionP1("1");
+        robot.mostramosListaDeLetras("1");
     }
 
     @Test
     public void test15CrearSegundaLetraConRotacion() { // 15
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
@@ -449,62 +449,62 @@ public class EspressoTests {
         // When rotamos pantalla
         rotateScreen();
         // Then mostramos letra en lista en posicion "0" con valor "A"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("0", "A");
+        robot.mostramosLetraEnLista("0", "A");
         // And mostramos letra en lista en posicion "1" con valor "B"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("1", "B");
+        robot.mostramosLetraEnLista("1", "B");
         // And mostramos lista de letras con dimension "2"
-        robot.mostramosListaDeLetrasConDimensionP1("2");
+        robot.mostramosListaDeLetras("2");
     }
 
     @Test
     public void test16PulsarEnSegundaLetraConRotacion() { // 16
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "1"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("1");
+        robot.pulsamosLetraEnLista("1");
         // When rotamos pantalla
         rotateScreen();
         // Then mostramos lista de numeros con dimension "0"
-        robot.mostramosListaDeNumerosConDimensionP1("0");
+        robot.mostramosListaDeNumeros("0");
     }
 
     @Test
     public void test17CrearPrimerNumeroParaSegundaLetraConRotacion() { // 17
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "1"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("1");
+        robot.pulsamosLetraEnLista("1");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // When rotamos pantalla
         rotateScreen();
         // Then mostramos numero en lista en posicion "0" con valor "1"
-        robot.mostramosNumeroEnListaEnPosicionP1ConValorP2("0", "1");
+        robot.mostramosNumeroEnLista("0", "1");
         // And mostramos lista de numeros con dimension "1"
-        robot.mostramosListaDeNumerosConDimensionP1("1");
+        robot.mostramosListaDeNumeros("1");
     }
 
     @Test
     public void test18CrearSegundoNumeroParaSegundaLetraConRotacion() { // 18
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "1"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("1");
+        robot.pulsamosLetraEnLista("1");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos boton de lista de numeros
@@ -512,24 +512,24 @@ public class EspressoTests {
         // When rotamos pantalla
         rotateScreen();
         // Then mostramos numero en lista en posicion "0" con valor "1"
-        robot.mostramosNumeroEnListaEnPosicionP1ConValorP2("0", "1");
+        robot.mostramosNumeroEnLista("0", "1");
         // And mostramos numero en lista en posicion "1" con valor "2"
-        robot.mostramosNumeroEnListaEnPosicionP1ConValorP2("1", "2");
+        robot.mostramosNumeroEnLista("1", "2");
         // And mostramos lista de numeros con dimension "2"
-        robot.mostramosListaDeNumerosConDimensionP1("2");
+        robot.mostramosListaDeNumeros("2");
     }
 
     @Test
     public void test19RegresarDesdeSegundoNumeroParaSegundaLetraConRotacion() { // 19
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "1"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("1");
+        robot.pulsamosLetraEnLista("1");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos boton de lista de numeros
@@ -539,24 +539,24 @@ public class EspressoTests {
         // When rotamos pantalla
         rotateScreen();
         // Then mostramos letra en lista en posicion "0" con valor "A"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("0", "A");
+        robot.mostramosLetraEnLista("0", "A");
         // And mostramos letra en lista en posicion "1" con valor "B"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("1", "B");
+        robot.mostramosLetraEnLista("1", "B");
         // And mostramos lista de letras con dimension "2"
-        robot.mostramosListaDeLetrasConDimensionP1("2");
+        robot.mostramosListaDeLetras("2");
     }
 
     @Test
     public void test20CrearTercerLetraConRotacion() { // 20
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "1"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("1");
+        robot.pulsamosLetraEnLista("1");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos boton de lista de numeros
@@ -568,26 +568,26 @@ public class EspressoTests {
         // When rotamos pantalla
         rotateScreen();
         // Then mostramos letra en lista en posicion "0" con valor "A"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("0", "A");
+        robot.mostramosLetraEnLista("0", "A");
         // And mostramos letra en lista en posicion "1" con valor "B"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("1", "B");
+        robot.mostramosLetraEnLista("1", "B");
         // And mostramos letra en lista en posicion "2" con valor "C"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("2", "C");
+        robot.mostramosLetraEnLista("2", "C");
         // And mostramos lista de letras con dimension "3"
-        robot.mostramosListaDeLetrasConDimensionP1("3");
+        robot.mostramosListaDeLetras("3");
     }
 
     @Test
     public void test21PulsarEnTerceraLetraConRotacion() { // 21
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "1"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("1");
+        robot.pulsamosLetraEnLista("1");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos boton de lista de numeros
@@ -597,24 +597,24 @@ public class EspressoTests {
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "2"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("2");
+        robot.pulsamosLetraEnLista("2");
         // When rotamos pantalla
         rotateScreen();
         // Then mostramos lista de numeros con dimension "0"
-        robot.mostramosListaDeNumerosConDimensionP1("0");
+        robot.mostramosListaDeNumeros("0");
     }
 
     @Test
     public void test22CrearPrimerNumeroParaTerceraLetraConRotacion() { // 22
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "1"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("1");
+        robot.pulsamosLetraEnLista("1");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos boton de lista de numeros
@@ -624,28 +624,28 @@ public class EspressoTests {
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "2"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("2");
+        robot.pulsamosLetraEnLista("2");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // When rotamos pantalla
         rotateScreen();
         // Then mostramos numero en lista en posicion "0" con valor "3"
-        robot.mostramosNumeroEnListaEnPosicionP1ConValorP2("0", "3");
+        robot.mostramosNumeroEnLista("0", "3");
         // And mostramos lista de numeros con dimension "1"
-        robot.mostramosListaDeNumerosConDimensionP1("1");
+        robot.mostramosListaDeNumeros("1");
     }
 
     @Test
     public void test23RegresarDesdePrimerNumeroParaTerceraLetraConRotacion() { // 23
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "1"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("1");
+        robot.pulsamosLetraEnLista("1");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos boton de lista de numeros
@@ -655,7 +655,7 @@ public class EspressoTests {
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "2"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("2");
+        robot.pulsamosLetraEnLista("2");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos back en lista de numeros
@@ -663,26 +663,26 @@ public class EspressoTests {
         // When rotamos pantalla
         rotateScreen();
         // Then mostramos letra en lista en posicion "0" con valor "A"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("0", "A");
+        robot.mostramosLetraEnLista("0", "A");
         // And mostramos letra en lista en posicion "1" con valor "B"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("1", "B");
+        robot.mostramosLetraEnLista("1", "B");
         // And mostramos letra en lista en posicion "2" con valor "C"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("2", "C");
+        robot.mostramosLetraEnLista("2", "C");
         // And mostramos lista de letras con dimension "3"
-        robot.mostramosListaDeLetrasConDimensionP1("3");
+        robot.mostramosListaDeLetras("3");
     }
 
     @Test
     public void test24PulsarEnPrimeraLetraConRotacion() { // 24
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "1"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("1");
+        robot.pulsamosLetraEnLista("1");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos boton de lista de numeros
@@ -692,30 +692,30 @@ public class EspressoTests {
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "2"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("2");
+        robot.pulsamosLetraEnLista("2");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos back en lista de numeros
         robot.pulsamosBackEnListaDeNumeros();
         // And pulsamos celda de letra en posicion "0"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("0");
+        robot.pulsamosLetraEnLista("0");
         // When rotamos pantalla
         rotateScreen();
         // Then mostramos lista de numeros con dimension "0"
-        robot.mostramosListaDeNumerosConDimensionP1("0");
+        robot.mostramosListaDeNumeros("0");
     }
 
     @Test
     public void test25CrearPrimerNumeroParaPrimeraLetraConRotacion() { // 25
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "1"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("1");
+        robot.pulsamosLetraEnLista("1");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos boton de lista de numeros
@@ -725,34 +725,34 @@ public class EspressoTests {
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "2"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("2");
+        robot.pulsamosLetraEnLista("2");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos back en lista de numeros
         robot.pulsamosBackEnListaDeNumeros();
         // And pulsamos celda de letra en posicion "0"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("0");
+        robot.pulsamosLetraEnLista("0");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // When rotamos pantalla
         rotateScreen();
         // Then mostramos numero en lista en posicion "0" con valor "4"
-        robot.mostramosNumeroEnListaEnPosicionP1ConValorP2("0", "4");
+        robot.mostramosNumeroEnLista("0", "4");
         // And mostramos lista de numeros con dimension "1"
-        robot.mostramosListaDeNumerosConDimensionP1("1");
+        robot.mostramosListaDeNumeros("1");
     }
 
     @Test
     public void test26RegresarDesdePrimerNumeroParaPrimeraLetraConRotacion() { // 26
 
         // Given mostramos lista de letras con dimension "0"
-        robot.mostramosListaDeLetrasConDimensionP1("0");
+        robot.mostramosListaDeLetras("0");
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "1"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("1");
+        robot.pulsamosLetraEnLista("1");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos boton de lista de numeros
@@ -762,13 +762,13 @@ public class EspressoTests {
         // And pulsamos boton de lista de letras
         robot.pulsamosBotonDeListaDeLetras();
         // And pulsamos celda de letra en posicion "2"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("2");
+        robot.pulsamosLetraEnLista("2");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos back en lista de numeros
         robot.pulsamosBackEnListaDeNumeros();
         // And pulsamos celda de letra en posicion "0"
-        robot.pulsamosCeldaDeLetraEnPosicionP1("0");
+        robot.pulsamosLetraEnLista("0");
         // And pulsamos boton de lista de numeros
         robot.pulsamosBotonDeListaDeNumeros();
         // And pulsamos back en lista de numeros
@@ -776,12 +776,12 @@ public class EspressoTests {
         // When rotamos pantalla
         rotateScreen();
         // Then mostramos letra en lista en posicion "0" con valor "A"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("0", "A");
+        robot.mostramosLetraEnLista("0", "A");
         // And mostramos letra en lista en posicion "1" con valor "B"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("1", "B");
+        robot.mostramosLetraEnLista("1", "B");
         // And mostramos letra en lista en posicion "2" con valor "C"
-        robot.mostramosLetraEnListaEnPosicionP1ConValorP2("2", "C");
+        robot.mostramosLetraEnLista("2", "C");
         // And mostramos lista de letras con dimension "3"
-        robot.mostramosListaDeLetrasConDimensionP1("3");
+        robot.mostramosListaDeLetras("3");
     }
 }

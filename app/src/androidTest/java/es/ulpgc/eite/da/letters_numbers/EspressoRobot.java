@@ -69,37 +69,37 @@ public class EspressoRobot {
 
 
 
-    public void mostramosListaDeLetrasConDimensionP1(String p1) {
-        onView (withId (R.id.letterList)).check (matches (withListSize (p1)));
+    public void mostramosListaDeLetras(String dim) {
+        onView (withId (R.id.letterList)).check (matches (withListSize (dim)));
     }
 
     public void pulsamosBotonDeListaDeLetras() {
         onView(withId(R.id.letterListButton)).perform(click());
     }
 
-    public void mostramosLetraEnListaEnPosicionP1ConValorP2(String p1, String p2) {
+    public void mostramosLetraEnLista(String pos, String val) {
         onView(withId (R.id.letterList))
-            .check(matches(withValueAtPosition(p2, p1)));
+            .check(matches(withValueAtPosition(val, pos)));
     }
 
-    public void pulsamosCeldaDeLetraEnPosicionP1(String p1) {
+    public void pulsamosLetraEnLista(String pos) {
         onData(allOf())
             .inAdapterView(withId(R.id.letterList))
-            .atPosition(Integer.valueOf(p1))
+            .atPosition(Integer.valueOf(pos))
             .perform(click());
     }
 
-    public void mostramosListaDeNumerosConDimensionP1(String p1) {
-        onView (withId (R.id.numberList)).check (matches (withListSize (p1)));
+    public void mostramosListaDeNumeros(String dim) {
+        onView (withId (R.id.numberList)).check (matches (withListSize (dim)));
     }
 
     public void pulsamosBotonDeListaDeNumeros() {
         onView(withId(R.id.numberListButton)).perform(click());
     }
 
-    public void mostramosNumeroEnListaEnPosicionP1ConValorP2(String p1, String p2) {
+    public void mostramosNumeroEnLista(String pos, String val) {
         onView(withId (R.id.numberList))
-            .check(matches(withValueAtPosition(p2, p1)));
+            .check(matches(withValueAtPosition(val, pos)));
     }
 
     public void pulsamosBackEnListaDeNumeros() {

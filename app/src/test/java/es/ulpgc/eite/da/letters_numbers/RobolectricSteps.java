@@ -25,16 +25,16 @@ public class RobolectricSteps {
   private ActivityController<LetterListActivity> lTestCtrl;
   private ActivityController<NumberListActivity> nTestCtrl;
 
-  public void iniciamosPantallaP1(String p1) {
+  public void iniciamosPantalla(String scr) {
 
-    if(p1.equals("Letters")) {
+    if(scr.equals("Letters")) {
 
       lTestCtrl = Robolectric.buildActivity(LetterListActivity.class);
       lTestCtrl.create().resume().visible();
 
     }
 
-    if(p1.equals("Numbers")) {
+    if(scr.equals("Numbers")) {
       lTestCtrl.pause();
 
       nTestCtrl = Robolectric.buildActivity(NumberListActivity.class);
@@ -44,10 +44,10 @@ public class RobolectricSteps {
 
   }
   
-  public void mostramosListaDeLetrasConDimensionP1(String p1) {
+  public void mostramosListaDeLetras(String dim) {
     //onView (withId (R.id.letterList)).check (matches (withListSize (p1)));
 
-    int size = Integer.parseInt(p1);
+    int size = Integer.parseInt(dim);
 
     LetterListActivity activity = lTestCtrl.get();
 
@@ -73,25 +73,25 @@ public class RobolectricSteps {
     activity.findViewById(R.id.numberListButton).performClick();
   }
 
-  public void mostramosLetraEnListaEnPosicionP1ConValorP2(String p1, String p2) {
+  public void mostramosLetraEnLista(String pos, String val) {
     /*
     onView(withId (R.id.letterList))
         .check(matches(withValueAtPosition(p2, p1)));
         
     */
 
-    int pos = Integer.parseInt(p1);
+    int position = Integer.parseInt(pos);
 
     LetterListActivity activity = lTestCtrl.get();
 
     ListView list = activity.findViewById(R.id.letterList);
     LetterListAdapter adapter = (LetterListAdapter) list.getAdapter();
-    LetterData item = adapter.getItem(pos);
+    LetterData item = adapter.getItem(position);
 
-    assertThat(item.letter, equalTo(p2));
+    assertThat(item.letter, equalTo(val));
   }
 
-  public void pulsamosCeldaDeLetraEnPosicionP1(String p1) {
+  public void pulsamosLetraEnLista(String pos) {
     /*
     onData(allOf())
         .inAdapterView(withId(R.id.letterList))
@@ -99,7 +99,7 @@ public class RobolectricSteps {
         .perform(click());
     */
 
-    int pos = Integer.parseInt(p1);
+    int position = Integer.parseInt(pos);
 
     LetterListActivity activity = lTestCtrl.get();
     ListView list = activity.findViewById(R.id.letterList);
@@ -108,14 +108,14 @@ public class RobolectricSteps {
     list.layout(0,0,100,1000);
 
     //list.smoothScrollToPosition(pos);
-    list.getChildAt(pos).performClick();
+    list.getChildAt(position).performClick();
     //shadowOf(list).performItemClick(pos);
   }
 
-  public void mostramosListaDeNumerosConDimensionP1(String p1) {
+  public void mostramosListaDeNumeros(String dim) {
     //onView (withId (R.id.numberList)).check (matches (withListSize (p1)));
 
-    int size = Integer.parseInt(p1);
+    int size = Integer.parseInt(dim);
 
     NumberListActivity activity = nTestCtrl.get();
 
@@ -128,23 +128,23 @@ public class RobolectricSteps {
 
 
 
-  public void mostramosNumeroEnListaEnPosicionP1ConValorP2(String p1, String p2) {
+  public void mostramosNumeroEnLista(String pos, String val) {
     /*
     onView(withId (R.id.numberList))
         .check(matches(withValueAtPosition(p2, p1)));
     */
 
 
-    int pos = Integer.parseInt(p1);
-    int num = Integer.parseInt(p2);
+    int position = Integer.parseInt(pos);
+    int number = Integer.parseInt(val);
 
     NumberListActivity activity = nTestCtrl.get();
 
     ListView list = activity.findViewById(R.id.numberList);
     NumberListAdapter adapter = (NumberListAdapter) list.getAdapter();
-    NumberData item = adapter.getItem(pos);
+    NumberData item = adapter.getItem(position);
 
-    assertThat(item.number, equalTo(num));
+    assertThat(item.number, equalTo(number));
   }
 
   public void pulsamosBackEnListaDeNumeros() {
@@ -157,11 +157,11 @@ public class RobolectricSteps {
     lTestCtrl.resume().visible();
   }
 
-  public void rotarPantallaP1(String p1) {
+  public void rotarPantalla(String scr) {
 
     Bundle bundle = new Bundle();
 
-    if(p1.equals("Letters")) {
+    if(scr.equals("Letters")) {
       lTestCtrl
           .saveInstanceState(bundle)
           .pause()
@@ -175,7 +175,7 @@ public class RobolectricSteps {
           .visible();
     }
 
-    if(p1.equals("Numbers")) {
+    if(scr.equals("Numbers")) {
       nTestCtrl
           .saveInstanceState(bundle)
           .pause()
