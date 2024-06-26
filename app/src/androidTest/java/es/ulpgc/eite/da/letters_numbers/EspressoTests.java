@@ -9,12 +9,14 @@ import androidx.test.filters.LargeTest;
 import androidx.test.rule.ActivityTestRule;
 import androidx.test.uiautomator.UiDevice;
 
+import org.junit.After;
 import org.junit.FixMethodOrder;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 
+import es.ulpgc.eite.da.letters_numbers.app.AppMediator;
 import es.ulpgc.eite.da.letters_numbers.letters.LetterListActivity;
 
 @RunWith(AndroidJUnit4.class)
@@ -31,6 +33,10 @@ public class EspressoTests {
     public EspressoRobot robot = new EspressoRobot();
 
 
+    @After
+    public void resetTest() {
+        AppMediator.resetInstance();
+    }
 
     /*
     public void rotateScreen() {
